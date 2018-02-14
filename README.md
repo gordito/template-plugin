@@ -35,7 +35,21 @@ Minimum files needed are a package.json and an entry script with the following f
 To use your plugin with your Klister.io server, use the following steps:
 
 
-1. **Choose a good name for you plugin.** The name will also be the command name inside the api. You need to name yor plugin with the 'klister-' prefix for it to work. When your klister server starts, it looks for all dependencies with the 'klister-' prefix and loads them automatically. You can not have two plugins with the same name activated at the same time.
+1. **Choose a good name for you plugin.** The name will also be the command name inside the api. You need to name yor plugin with the 'klister-' prefix for it to work. When your klister server starts, it looks for all dependencies with the 'klister-' prefix and loads them automatically. You can not have two plugins with the same name activated at the same time. 
+
+	### Working names
+	```
+	klister-hello-world
+	klister-ilovecats
+	klister-mycompany
+	```
+
+	### Not working names
+	```
+	hello-world
+	ilovecats-klister
+	company-klister-api
+	```
 
 
 2. **Create a repo on GitHub and upload your plugin**, containing at least a main.js and a package.json. If you want to use a private repo, be shure to add `private:true` to your package.json. Read more about using private repos with npm here: https://stackoverflow.com/questions/10386310/how-to-install-a-private-npm-module-without-my-own-registry
