@@ -48,7 +48,7 @@ function Run(controller, session, command)
 
 	// Use the session to return, in [Object] format.
 	// Klister.io Session does the Json parsing for you
-	Session.Send(ret);
+	session.Send(ret);
 }
 
 module.exports = 
