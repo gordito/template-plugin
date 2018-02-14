@@ -2,7 +2,7 @@
 	Klister.io Plugin Template
 
 	This is a template of a plugin in Klister.io.
-	Minimum files needed are an entry script with teh following functions:
+	Minimum files needed are a package.json and an entry script with the following functions:
 		
 		Init(controller)
 		- Runs once when the Klister server starts
