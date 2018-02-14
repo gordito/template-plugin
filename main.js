@@ -26,13 +26,15 @@ function Init(controller)
 {
 	Controller = controller;
 	// Your init code, DB connections and worker jobs here...
+	// Maybe check the global Config for your required values.
 }
 
 function Run(controller, session, command) 
 {
 	// Metadata, like command name, is in the first level of the json
 	var ret 			= {};
-	ret.com 			= 'testplugin'; // the command name
+	ret.com 			= 'testplugin'; // the plugin name
+	ret.action 			= 'call-mom'; // the API action
 	ret.success 		= 1;  // Return 1 of the command was successfull, 0 if not
 	ret.error 			= 0;  // If success was 0, optionally return an error code explaining what went wrong
 	ret.errortext 		= ''; // Add a error text to clarify the error
