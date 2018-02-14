@@ -22,6 +22,8 @@
 
 */
 
+var Controller = null;
+
 function Init(controller)
 {
 	Controller = controller;
