@@ -7,7 +7,7 @@
 		Init(controller)
 		- Runs once when the Klister server starts
 		- Can contain a worker loop for polling external API:s
-		- The class the ran Init() is stored in the Controller.Plugin.pluginname
+		- The class that first ran Init() is stored in the Controller.Plugin.pluginname
 
 
 		Run(controller, session, command)

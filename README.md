@@ -16,7 +16,7 @@ Minimum files needed are a package.json and an entry script with the following f
 ## Init (controller)
 - Runs once when the Klister server starts
 - Can contain a worker loop for polling external API:s
-- The class the ran Init() is stored in the Controller.Plugin.pluginname
+- The class that first ran Init() is stored in the Controller.Plugin.pluginname
 
 
 ## Run (controller, session, command)
@@ -35,19 +35,21 @@ Minimum files needed are a package.json and an entry script with the following f
 To use your plugin with your Klister.io server, use the following steps:
 
 
-1. Choose a good name for you plugin. The name will also be the command name inside the api. You need to name yor plugin with the 'klister-' prefix for it to work. When your klister server starts, it looks for all dependencies with the 'klister-' prefix and loads them automatically. You can not have two plugins with the same name activated at the same time.
+1. **Choose a good name for you plugin.** The name will also be the command name inside the api. You need to name yor plugin with the 'klister-' prefix for it to work. When your klister server starts, it looks for all dependencies with the 'klister-' prefix and loads them automatically. You can not have two plugins with the same name activated at the same time.
 
 
-2. Create a repo on GitHub and upload your plugin, containing at least a main.js and a package.json. If you want to use a private repo, be shure to add `private:true` to your package.json. Read more about using private repos with npm here: https://stackoverflow.com/questions/10386310/how-to-install-a-private-npm-module-without-my-own-registry
+2. **Create a repo on GitHub and upload your plugin**, containing at least a main.js and a package.json. If you want to use a private repo, be shure to add `private:true` to your package.json. Read more about using private repos with npm here: https://stackoverflow.com/questions/10386310/how-to-install-a-private-npm-module-without-my-own-registry
 
-3. If you use a public repo, just go inte your Klister.io Klister-server folder and install the plugin:
+3. **Install the plugin.** If you use a public repo, just go inte your Klister.io Klister-server folder and install the plugin:
 
-    npm install git://github.com/your-ghithub-username/your-repo-name.git
+```
+npm install git://github.com/your-ghithub-username/your-repo-name.git
+```
 
 This will add your repo as a dependency in you Klister-server installation. If you do updates to your repo in the future, all you need to do is run `npm install` in the klister-server folder again and restart the server, and you are up to date.
 
 
-4. Restart your klister server.
+4. **Restart your klister server.** Depending on platform, look at the current documentation.
 
 
-5. Try it out with your favorie HTTP client. You should have yor working plugin now!
+5. **Try it out with your favorie HTTP client.** You should have yor working plugin now!
