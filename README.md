@@ -56,8 +56,18 @@ To use your plugin with your Klister.io server, use the following steps:
 
 3. **Install the plugin.** If you use a public repo, just go inte your Klister.io Klister-server folder and install the plugin:
 
+**Production**
+You should run the public commited version of your plugin in production to avoid data loss.
 ```
 npm install git://github.com/your-ghithub-username/your-repo-name.git
+```
+
+**Development**
+When you develop, you might want to run your plugin locally to avoid commiting every step of the way. You can achieve that by running `npm link`or by adding your local path directly to the `package.json` like this:
+```
+"dependencies": {
+    "bar": "file:../foo/bar"
+}
 ```
 
 This will add your repo as a dependency in you Klister-server installation. If you do updates to your repo in the future, all you need to do is run `npm install` in the klister-server folder again and restart the server, and you are up to date.
